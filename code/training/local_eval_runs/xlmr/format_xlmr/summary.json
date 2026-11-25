@@ -1,0 +1,209 @@
+{
+  "run_name": "format_xlmr",
+  "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/xlmr/format_xlmr/model.safetensors",
+  "tokenizer_path": null,
+  "config_path": null,
+  "task": "sentence",
+  "category_name": "format",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/format/format_ner_eval.json",
+  "training_report_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/xlmr/format_xlmr/final_eval_metrics.json",
+  "evaluation_settings": {
+    "coverage_threshold": 0.3,
+    "window_tokens": 160,
+    "stride_tokens": 80,
+    "max_span_words": 5,
+    "iou_threshold": 0.5,
+    "min_pred_span_len": 1,
+    "short_entity_threshold": 0.35,
+    "short_singleton_keep_threshold": 0.85,
+    "short_citation_filter": true
+  },
+  "sentence": {
+    "task": "sentence_token_classification",
+    "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/xlmr/format_xlmr/model.safetensors",
+    "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/format/format_ner_eval.json",
+    "category_name": "format",
+    "num_examples": 103,
+    "coverage_threshold": 0.3,
+    "seqeval_span_f1": 0.30039525691699603,
+    "token_overlap_f1_entity_vs_O": {
+      "precision": 0.7546071774975752,
+      "recall": 0.6274193548387097,
+      "f1": 0.6851607221488331,
+      "tp": 778,
+      "fp": 253,
+      "fn": 462
+    },
+    "pairwise_span_f1": {
+      "pairwise_micro": {
+        "precision": 0.6481481481481481,
+        "recall": 0.6481481481481481,
+        "f1": 0.6481481481481481
+      },
+      "pairwise_macro": {
+        "precision": 0.6090614886731391,
+        "recall": 0.6090614886731391,
+        "f1": 0.6090614886731391
+      },
+      "per_pair": {
+        "gold→pred": {
+          "precision": 0.6481481481481481,
+          "recall": 0.6481481481481481,
+          "f1": 0.6481481481481481
+        },
+        "pred→gold": {
+          "precision": 0.6481481481481481,
+          "recall": 0.6481481481481481,
+          "f1": 0.6481481481481481
+        }
+      },
+      "num_examples": 103,
+      "num_examples_macro_scored": 103,
+      "iou_threshold": 0.5
+    },
+    "sentence_label_from_bio_coverage": {
+      "confusion_matrix_labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          73,
+          4
+        ],
+        [
+          5,
+          21
+        ]
+      ],
+      "precision": 0.84,
+      "recall": 0.8076923076923077,
+      "f1": 0.8235294117647058,
+      "accuracy": 0.912621359223301,
+      "num_sentences": 103
+    },
+    "token_metrics_all_tokens": {
+      "label_space": "binary_word_inside_vs_outside_span",
+      "cohen_kappa_token_level": 0.634048710404691,
+      "cohen_kappa_token_level_macro": {
+        "mean": 0.5144395897220819,
+        "num_examples_scored": 103
+      },
+      "token_prf": {
+        "binary": {
+          "precision": 0.7759433962264151,
+          "recall": 0.6149532710280374,
+          "f1": 0.6861313868613139
+        }
+      },
+      "accuracy": 0.9094464500601684,
+      "confusion_matrix": {
+        "labels": [
+          "O",
+          "ENTITY"
+        ],
+        "matrix": [
+          [
+            2694,
+            95
+          ],
+          [
+            206,
+            329
+          ]
+        ]
+      },
+      "num_tokens_scored": 3324
+    },
+    "bio_subtoken_metrics_all_tokens": {
+      "krippendorff_alpha_nominal": 0.5967078990865627,
+      "cohen_kappa_token_level": 0.5975982353744949,
+      "cohen_kappa_token_level_macro": {
+        "mean": 0.5274041808521782,
+        "num_examples_scored": 103
+      },
+      "token_prf": {
+        "micro": {
+          "precision": 0.8748151798915722,
+          "recall": 0.8748151798915722,
+          "f1": 0.8748151798915722
+        },
+        "macro": {
+          "precision": 0.6797925598056188,
+          "recall": 0.6791611448886735,
+          "f1": 0.6729081389440621
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "B-FORMAT",
+          "I-FORMAT",
+          "O"
+        ],
+        "matrix": [
+          [
+            53,
+            8,
+            47
+          ],
+          [
+            39,
+            678,
+            415
+          ],
+          [
+            53,
+            200,
+            4594
+          ]
+        ]
+      },
+      "num_tokens_scored": 6087
+    },
+    "bio_subtoken_metrics_entity_only": {
+      "krippendorff_alpha_nominal": 0.026317292170171536,
+      "cohen_kappa_token_level": 0.15969921929086472,
+      "cohen_kappa_token_level_macro": {
+        "mean": 0.43584849712956336,
+        "num_examples_scored": 103
+      },
+      "token_prf": {
+        "micro": {
+          "precision": 0.589516129032258,
+          "recall": 0.589516129032258,
+          "f1": 0.589516129032258
+        },
+        "macro": {
+          "precision": 0.5214750496471882,
+          "recall": 0.36322689002312086,
+          "f1": 0.42529152915291535
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "B-FORMAT",
+          "I-FORMAT",
+          "O"
+        ],
+        "matrix": [
+          [
+            53,
+            8,
+            47
+          ],
+          [
+            39,
+            678,
+            415
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "num_tokens_scored": 1240
+    }
+  }
+}

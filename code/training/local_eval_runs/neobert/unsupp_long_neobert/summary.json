@@ -1,0 +1,209 @@
+{
+  "run_name": "unsupp_long_neobert",
+  "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/unsupported_claim/unsupported_long_neoBERT/best_model/model.safetensors",
+  "tokenizer_path": null,
+  "config_path": null,
+  "task": "sentence",
+  "category_name": "unsupported_claim",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/unsupported_claim/unsupported_claim_ner_eval_long_6plus.json",
+  "training_report_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/unsupported_claim/unsupported_long_neoBERT/final_eval_metrics.json",
+  "evaluation_settings": {
+    "coverage_threshold": 0.3,
+    "window_tokens": 160,
+    "stride_tokens": 80,
+    "max_span_words": 5,
+    "iou_threshold": 0.5,
+    "min_pred_span_len": 5,
+    "short_entity_threshold": 0.35,
+    "short_singleton_keep_threshold": 0.85,
+    "short_citation_filter": true
+  },
+  "sentence": {
+    "task": "sentence_token_classification",
+    "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/unsupported_claim/unsupported_long_neoBERT/best_model/model.safetensors",
+    "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/unsupported_claim/unsupported_claim_ner_eval_long_6plus.json",
+    "category_name": "unsupported_claim",
+    "num_examples": 269,
+    "coverage_threshold": 0.3,
+    "seqeval_span_f1": 0.0,
+    "token_overlap_f1_entity_vs_O": {
+      "precision": 0.2890326374595707,
+      "recall": 0.25348117586384733,
+      "f1": 0.27009204561066086,
+      "tp": 983,
+      "fp": 2418,
+      "fn": 2895
+    },
+    "pairwise_span_f1": {
+      "pairwise_micro": {
+        "precision": 0.053268765133171914,
+        "recall": 0.053268765133171914,
+        "f1": 0.053268765133171914
+      },
+      "pairwise_macro": {
+        "precision": 0.03886397608370702,
+        "recall": 0.03886397608370702,
+        "f1": 0.03886397608370702
+      },
+      "per_pair": {
+        "gold→pred": {
+          "precision": 0.041353383458646614,
+          "recall": 0.07482993197278912,
+          "f1": 0.05326876513317191
+        },
+        "pred→gold": {
+          "precision": 0.07482993197278912,
+          "recall": 0.041353383458646614,
+          "f1": 0.05326876513317191
+        }
+      },
+      "num_examples": 269,
+      "num_examples_macro_scored": 223,
+      "iou_threshold": 0.5
+    },
+    "sentence_label_from_bio_coverage": {
+      "confusion_matrix_labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          65,
+          70
+        ],
+        [
+          87,
+          47
+        ]
+      ],
+      "precision": 0.4017094017094017,
+      "recall": 0.35074626865671643,
+      "f1": 0.3745019920318725,
+      "accuracy": 0.4163568773234201,
+      "num_sentences": 269
+    },
+    "token_metrics_all_tokens": {
+      "label_space": "binary_word_inside_vs_outside_span",
+      "cohen_kappa_token_level": -0.09313915902271797,
+      "cohen_kappa_token_level_macro": {
+        "mean": -0.006174350029046615,
+        "num_examples_scored": 269
+      },
+      "token_prf": {
+        "binary": {
+          "precision": 0.36020408163265305,
+          "recall": 0.2425283407763655,
+          "f1": 0.2898788749743379
+        }
+      },
+      "accuracy": 0.4826503140891415,
+      "confusion_matrix": {
+        "labels": [
+          "O",
+          "ENTITY"
+        ],
+        "matrix": [
+          [
+            2521,
+            1254
+          ],
+          [
+            2205,
+            706
+          ]
+        ]
+      },
+      "num_tokens_scored": 6686
+    },
+    "bio_subtoken_metrics_all_tokens": {
+      "krippendorff_alpha_nominal": -0.14811475498091986,
+      "cohen_kappa_token_level": -0.14326316964534502,
+      "cohen_kappa_token_level_macro": {
+        "mean": 0.005178993603548759,
+        "num_examples_scored": 269
+      },
+      "token_prf": {
+        "micro": {
+          "precision": 0.439404897200124,
+          "recall": 0.439404897200124,
+          "f1": 0.439404897200124
+        },
+        "macro": {
+          "precision": 0.2947880200881887,
+          "recall": 0.32657472601624965,
+          "f1": 0.3017728587661577
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "O",
+          "B-UNSUPPORTED_CLAIM",
+          "I-UNSUPPORTED_CLAIM"
+        ],
+        "matrix": [
+          [
+            3383,
+            252,
+            2166
+          ],
+          [
+            112,
+            25,
+            10
+          ],
+          [
+            2783,
+            103,
+            845
+          ]
+        ]
+      },
+      "num_tokens_scored": 9679
+    },
+    "bio_subtoken_metrics_entity_only": {
+      "krippendorff_alpha_nominal": -0.5212878523804849,
+      "cohen_kappa_token_level": 0.013950813279692498,
+      "cohen_kappa_token_level_macro": {
+        "mean": 0.02565802502013698,
+        "num_examples_scored": 144
+      },
+      "token_prf": {
+        "micro": {
+          "precision": 0.22434244455905106,
+          "recall": 0.22434244455905106,
+          "f1": 0.22434244455905106
+        },
+        "macro": {
+          "precision": 0.3945388645224172,
+          "recall": 0.13218295448260606,
+          "f1": 0.1834436823534076
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "O",
+          "B-UNSUPPORTED_CLAIM",
+          "I-UNSUPPORTED_CLAIM"
+        ],
+        "matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            112,
+            25,
+            10
+          ],
+          [
+            2783,
+            103,
+            845
+          ]
+        ]
+      },
+      "num_tokens_scored": 3878
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "task": "sentence_token_classification",
+  "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/modernbert_citations/format_modernBERT/model.safetensors",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/format/format_ner_eval.json",
+  "category_name": "format",
+  "num_examples": 103,
+  "coverage_threshold": 0.3,
+  "seqeval_span_f1": 0.21264367816091953,
+  "token_overlap_f1_entity_vs_O": {
+    "precision": 0.6047945205479452,
+    "recall": 0.7321724709784412,
+    "f1": 0.6624156039009753,
+    "tp": 883,
+    "fp": 577,
+    "fn": 323
+  },
+  "pairwise_span_f1": {
+    "pairwise_micro": {
+      "precision": 0.5333333333333333,
+      "recall": 0.5333333333333333,
+      "f1": 0.5333333333333333
+    },
+    "pairwise_macro": {
+      "precision": 0.5980582524271844,
+      "recall": 0.5980582524271844,
+      "f1": 0.5980582524271844
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1": 0.5333333333333333
+      },
+      "pred→gold": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4444444444444444,
+        "f1": 0.5333333333333333
+      }
+    },
+    "num_examples": 103,
+    "num_examples_macro_scored": 103,
+    "iou_threshold": 0.5
+  },
+  "sentence_label_from_bio_coverage": {
+    "confusion_matrix_labels": [
+      0,
+      1
+    ],
+    "confusion_matrix": [
+      [
+        67,
+        10
+      ],
+      [
+        3,
+        23
+      ]
+    ],
+    "precision": 0.696969696969697,
+    "recall": 0.8846153846153846,
+    "f1": 0.7796610169491526,
+    "accuracy": 0.8737864077669902,
+    "num_sentences": 103
+  },
+  "token_metrics_all_tokens": {
+    "label_space": "binary_word_inside_vs_outside_span",
+    "cohen_kappa_token_level": 0.5874994454185787,
+    "cohen_kappa_token_level_macro": {
+      "mean": 0.5034678684087525,
+      "num_examples_scored": 103
+    },
+    "token_prf": {
+      "binary": {
+        "precision": 0.626057529610829,
+        "recall": 0.6915887850467289,
+        "f1": 0.6571936056838366
+      }
+    },
+    "accuracy": 0.8838748495788207,
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "ENTITY"
+      ],
+      "matrix": [
+        [
+          2568,
+          221
+        ],
+        [
+          165,
+          370
+        ]
+      ]
+    },
+    "num_tokens_scored": 3324
+  },
+  "bio_subtoken_metrics_all_tokens": {
+    "krippendorff_alpha_nominal": 0.5498386051109732,
+    "cohen_kappa_token_level": 0.5506644139001782,
+    "cohen_kappa_token_level_macro": {
+      "mean": 0.5276787085138129,
+      "num_examples_scored": 103
+    },
+    "token_prf": {
+      "micro": {
+        "precision": 0.8373983739837398,
+        "recall": 0.8373983739837398,
+        "f1": 0.8373983739837398
+      },
+      "macro": {
+        "precision": 0.5930995353633725,
+        "recall": 0.6897325219195705,
+        "f1": 0.6235056014609562
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "B-FORMAT",
+        "I-FORMAT",
+        "O"
+      ],
+      "matrix": [
+        [
+          53,
+          9,
+          46
+        ],
+        [
+          51,
+          770,
+          277
+        ],
+        [
+          136,
+          441,
+          4121
+        ]
+      ]
+    },
+    "num_tokens_scored": 5904
+  },
+  "bio_subtoken_metrics_entity_only": {
+    "krippendorff_alpha_nominal": 0.13914611283422407,
+    "cohen_kappa_token_level": 0.21427477877461032,
+    "cohen_kappa_token_level_macro": {
+      "mean": 0.4551217168661216,
+      "num_examples_scored": 103
+    },
+    "token_prf": {
+      "micro": {
+        "precision": 0.6824212271973465,
+        "recall": 0.6824212271973465,
+        "f1": 0.6824212271973465
+      },
+      "macro": {
+        "precision": 0.49935403706263787,
+        "recall": 0.3973385954260271,
+        "f1": 0.44015272598117566
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "B-FORMAT",
+        "I-FORMAT",
+        "O"
+      ],
+      "matrix": [
+        [
+          53,
+          9,
+          46
+        ],
+        [
+          51,
+          770,
+          277
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "num_tokens_scored": 1206
+  }
+}

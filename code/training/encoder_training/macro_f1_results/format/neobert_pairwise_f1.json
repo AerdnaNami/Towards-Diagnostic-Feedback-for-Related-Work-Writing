@@ -1,0 +1,36 @@
+{
+  "model_name": "neobert",
+  "eval_file": "neobert/format_neoBERT/eval_predicted_spans.json",
+  "iou_threshold": 0.5,
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.5858585858585859,
+      "recall": 0.5858585858585859,
+      "f1": 0.5858585858585859
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.43283582089552236,
+        "recall": 0.90625,
+        "f1": 0.5858585858585859
+      },
+      "pred→gold": {
+        "precision": 0.90625,
+        "recall": 0.43283582089552236,
+        "f1": 0.5858585858585859
+      }
+    },
+    "num_examples": 32,
+    "iou_threshold": 0.5
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.70625,
+      "recall": 0.70625,
+      "f1": 0.70625
+    },
+    "num_examples_scored": 32,
+    "num_examples_total": 32,
+    "iou_threshold": 0.5
+  }
+}

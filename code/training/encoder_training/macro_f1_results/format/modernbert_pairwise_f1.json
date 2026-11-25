@@ -1,0 +1,36 @@
+{
+  "model_name": "modernbert",
+  "eval_file": "modernbert/runs/4_format_modernBERT/eval_predicted_spans.json",
+  "iou_threshold": 0.5,
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.6075949367088608,
+      "recall": 0.6075949367088608,
+      "f1": 0.6075949367088608
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.5106382978723404,
+        "recall": 0.75,
+        "f1": 0.6075949367088608
+      },
+      "pred→gold": {
+        "precision": 0.75,
+        "recall": 0.5106382978723404,
+        "f1": 0.6075949367088608
+      }
+    },
+    "num_examples": 32,
+    "iou_threshold": 0.5
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.6614583333333334,
+      "recall": 0.6614583333333334,
+      "f1": 0.6614583333333334
+    },
+    "num_examples_scored": 32,
+    "num_examples_total": 32,
+    "iou_threshold": 0.5
+  }
+}

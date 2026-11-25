@@ -1,0 +1,27 @@
+{
+  "model_name": "xlm_roberta",
+  "eval_file": "xlm_roberta/unsupported_short_xlm-roberta-base/eval_predicted_spans.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.8906221821460776,
+      "recall": 0.8680787484619441,
+      "f1": 0.8792059818408404
+    },
+    "tp": 9877,
+    "fp": 1213,
+    "fn": 1501,
+    "num_examples": 26
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.8702867735660735,
+      "recall": 0.8561705904787116,
+      "f1": 0.8551061792658488
+    },
+    "num_examples": 26
+  },
+  "kappa_macro": {
+    "mean": 0.22183043132667798,
+    "num_examples": 26
+  }
+}

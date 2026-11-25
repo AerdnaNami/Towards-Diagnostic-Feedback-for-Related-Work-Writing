@@ -1,0 +1,36 @@
+{
+  "model_name": "scibert",
+  "eval_file": "scibert/format_scibert/eval_predicted_spans.json",
+  "iou_threshold": 0.5,
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.7547169811320755,
+      "recall": 0.7547169811320755,
+      "f1": 0.7547169811320754
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.9523809523809523,
+        "recall": 0.625,
+        "f1": 0.7547169811320755
+      },
+      "pred→gold": {
+        "precision": 0.625,
+        "recall": 0.9523809523809523,
+        "f1": 0.7547169811320755
+      }
+    },
+    "num_examples": 32,
+    "iou_threshold": 0.5
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.6145833333333333,
+      "recall": 0.6145833333333333,
+      "f1": 0.6145833333333333
+    },
+    "num_examples_scored": 32,
+    "num_examples_total": 32,
+    "iou_threshold": 0.5
+  }
+}

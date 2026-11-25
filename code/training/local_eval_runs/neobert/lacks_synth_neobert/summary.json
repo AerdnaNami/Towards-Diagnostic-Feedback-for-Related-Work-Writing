@@ -1,0 +1,85 @@
+{
+  "run_name": "lacks_synth_neobert",
+  "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/lacks_synthesis_neoBERT/checkpoint-261",
+  "tokenizer_path": null,
+  "config_path": null,
+  "task": "paragraph",
+  "category_name": "lacks_synthesis",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/lacks_synthesis/lacks_synthesis_ner_eval.json",
+  "training_report_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/lacks_synthesis_neoBERT/final_eval_metrics.json",
+  "evaluation_settings": {
+    "coverage_threshold": 0.5,
+    "window_tokens": 160,
+    "stride_tokens": 80,
+    "max_span_words": 5,
+    "iou_threshold": 0.5,
+    "min_pred_span_len": 1,
+    "short_entity_threshold": 0.35,
+    "short_singleton_keep_threshold": 0.85,
+    "short_citation_filter": true
+  },
+  "paragraph": {
+    "task": "windowed_sequence_classification",
+    "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/lacks_synthesis_neoBERT/checkpoint-261",
+    "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/lacks_synthesis/lacks_synthesis_ner_eval.json",
+    "category_name": "lacks_synthesis",
+    "coverage_threshold": 0.5,
+    "window_tokens": 160,
+    "stride_tokens": 80,
+    "eval_num_windows": 293,
+    "final_eval_metrics": {
+      "precision": 0.9707317073170731,
+      "recall": 0.7031802120141343,
+      "f1": 0.8155737704918032,
+      "accuracy": 0.6928327645051194,
+      "cohen_kappa": 0.021666542999183802,
+      "confusion_matrix_labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          4,
+          6
+        ],
+        [
+          84,
+          199
+        ]
+      ],
+      "num_examples": 293,
+      "cohen_kappa_macro_by_document": {
+        "mean": 0.02609446180874752,
+        "num_documents_scored": 42
+      }
+    },
+    "pairwise_window_f1": {
+      "pairwise_micro": {
+        "precision": 0.8155737704918032,
+        "recall": 0.8155737704918032,
+        "f1": 0.8155737704918032
+      },
+      "per_pair": {
+        "gold→pred": {
+          "precision": 0.9707317073170731,
+          "recall": 0.7031802120141343,
+          "f1": 0.8155737704918032
+        },
+        "pred→gold": {
+          "precision": 0.7031802120141343,
+          "recall": 0.9707317073170731,
+          "f1": 0.8155737704918032
+        }
+      },
+      "num_windows": 293,
+      "num_positive_gold": 283,
+      "num_positive_pred": 205,
+      "pairwise_macro": {
+        "precision": 0.7624075392276533,
+        "recall": 0.7624075392276533,
+        "f1": 0.7624075392276533
+      },
+      "num_documents": 42
+    }
+  }
+}

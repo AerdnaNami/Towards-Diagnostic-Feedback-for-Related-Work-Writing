@@ -1,0 +1,29 @@
+# Secrets: never commit API keys
+*.env
+!keys.env.example
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.matplotlib_cache/
+
+# Editors / tools
+.vscode/
+.codex
+*~
+
+# Model checkpoints and training runs (hosted separately)
+checkpoints/
+*.safetensors
+*.bin
+code/training/decoder_training/runs/
+code/training/decoder_training/logs/
+
+# Third-party data that must not be redistributed (download separately)
+code/data_collection/ARR-22/
+code/data_collection/processed_data/
+code/data_collection/to_annotate/
+to_annotate/
+annotated_data/
+code/training/data/sciERC/

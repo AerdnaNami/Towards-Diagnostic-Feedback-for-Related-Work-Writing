@@ -1,0 +1,119 @@
+{
+  "task": "short_unsupported_claim_token_classification",
+  "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/scibert_citations/unsupported_short_scibert/checkpoint-21",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/unsupported_claim/unsupported_claim_ner_eval_short_1_5w.json",
+  "category_name": "unsupported_claim",
+  "max_span_words": 5,
+  "num_eval_sequences": 45,
+  "num_eval_tokens_scored": 1359,
+  "postprocessing": {
+    "entity_probability_threshold": 0.3,
+    "singleton_keep_threshold": 0.55,
+    "citation_filter": true
+  },
+  "token_overlap_f1_entity_vs_O": {
+    "precision": 0.3,
+    "recall": 0.4701492537313433,
+    "f1": 0.3662790697674419,
+    "tp": 63,
+    "fp": 147,
+    "fn": 71
+  },
+  "exact_match": {
+    "token_accuracy": 0.8395879323031641,
+    "sequence_exact_match": 0.0
+  },
+  "cohens_kappa_token_level": 0.2795465156997783,
+  "cohens_kappa_token_level_macro": {
+    "mean": 0.24913969478959316,
+    "num_examples_scored": 45
+  },
+  "pairwise_span_f1": {
+    "pairwise_micro": {
+      "precision": 0.33548387096774196,
+      "recall": 0.33548387096774196,
+      "f1": 0.33548387096774196
+    },
+    "pairwise_macro": {
+      "precision": 0.3179012345679012,
+      "recall": 0.3179012345679012,
+      "f1": 0.3179012345679012
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.2549019607843137,
+        "recall": 0.49056603773584906,
+        "f1": 0.3354838709677419
+      },
+      "pred→gold": {
+        "precision": 0.49056603773584906,
+        "recall": 0.2549019607843137,
+        "f1": 0.3354838709677419
+      }
+    },
+    "num_examples": 45,
+    "num_examples_macro_scored": 45,
+    "iou_threshold": 0.5
+  },
+  "pairwise_binary_agreement": {
+    "pairwise_micro": {
+      "precision": 0.8796750719241835,
+      "recall": 0.798014431195947,
+      "f1": 0.8368573575185145,
+      "tp": 15594,
+      "fp": 2133,
+      "fn": 3947
+    },
+    "pairwise_macro": {
+      "precision": 0.8660826933196789,
+      "recall": 0.7903520982275023,
+      "f1": 0.8159117242304454
+    },
+    "cohen_kappa": 0.21194384097805286,
+    "num_pairwise_items_scored": 23443
+  },
+  "confusion_matrix": {
+    "labels": [
+      "O",
+      "ENTITY"
+    ],
+    "matrix": [
+      [
+        1078,
+        147
+      ],
+      [
+        71,
+        63
+      ]
+    ]
+  },
+  "raw_argmax_subtoken_metrics": {
+    "num_tokens_scored": 2162,
+    "token_overlap_f1_entity_vs_O": {
+      "precision": 0.28536585365853656,
+      "recall": 0.43656716417910446,
+      "f1": 0.34513274336283184,
+      "tp": 117,
+      "fp": 293,
+      "fn": 151
+    },
+    "cohen_kappa_token_level": 0.22963928363920016,
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "ENTITY"
+      ],
+      "matrix": [
+        [
+          1601,
+          293
+        ],
+        [
+          151,
+          117
+        ]
+      ]
+    }
+  }
+}

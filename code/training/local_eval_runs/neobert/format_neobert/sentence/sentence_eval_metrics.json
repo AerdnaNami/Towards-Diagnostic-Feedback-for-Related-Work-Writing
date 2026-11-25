@@ -1,0 +1,188 @@
+{
+  "task": "sentence_token_classification",
+  "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/neobert_citations/format_neoBERT/model.safetensors",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/format/format_ner_eval.json",
+  "category_name": "format",
+  "num_examples": 103,
+  "coverage_threshold": 0.5,
+  "seqeval_span_f1": 0.0,
+  "token_overlap_f1_entity_vs_O": {
+    "precision": 0.21279654924514738,
+    "recall": 0.9563812600969306,
+    "f1": 0.34813290208762127,
+    "tp": 1184,
+    "fp": 4380,
+    "fn": 54
+  },
+  "pairwise_span_f1": {
+    "pairwise_micro": {
+      "precision": 0.05329153605015674,
+      "recall": 0.05329153605015674,
+      "f1": 0.05329153605015674
+    },
+    "pairwise_macro": {
+      "precision": 0.041024671121758505,
+      "recall": 0.041024671121758505,
+      "f1": 0.041024671121758505
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.03207547169811321,
+        "recall": 0.1574074074074074,
+        "f1": 0.05329153605015674
+      },
+      "pred→gold": {
+        "precision": 0.1574074074074074,
+        "recall": 0.03207547169811321,
+        "f1": 0.05329153605015674
+      }
+    },
+    "num_examples": 103,
+    "num_examples_macro_scored": 103,
+    "iou_threshold": 0.5
+  },
+  "sentence_label_from_bio_coverage": {
+    "confusion_matrix_labels": [
+      0,
+      1
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        96
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    "precision": 0.06796116504854369,
+    "recall": 1.0,
+    "f1": 0.12727272727272726,
+    "accuracy": 0.06796116504854369,
+    "num_sentences": 103
+  },
+  "token_metrics_all_tokens": {
+    "label_space": "binary_word_inside_vs_outside_span",
+    "cohen_kappa_token_level": -0.030155652260851706,
+    "cohen_kappa_token_level_macro": {
+      "mean": -0.03691479954397917,
+      "num_examples_scored": 103
+    },
+    "token_prf": {
+      "binary": {
+        "precision": 0.14825046040515655,
+        "recall": 0.902803738317757,
+        "f1": 0.25467967308199313
+      }
+    },
+    "accuracy": 0.14951865222623345,
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "ENTITY"
+      ],
+      "matrix": [
+        [
+          14,
+          2775
+        ],
+        [
+          52,
+          483
+        ]
+      ]
+    },
+    "num_tokens_scored": 3324
+  },
+  "bio_subtoken_metrics_all_tokens": {
+    "krippendorff_alpha_nominal": -0.5621855219241816,
+    "cohen_kappa_token_level": -0.12156850966663169,
+    "cohen_kappa_token_level_macro": {
+      "mean": -0.12170076937629692,
+      "num_examples_scored": 103
+    },
+    "token_prf": {
+      "micro": {
+        "precision": 0.06422995031937544,
+        "recall": 0.06422995031937544,
+        "f1": 0.06422995031937544
+      },
+      "macro": {
+        "precision": 0.11346563378991392,
+        "recall": 0.1530850037761868,
+        "f1": 0.0515183440776096
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "B-FORMAT",
+        "I-FORMAT"
+      ],
+      "matrix": [
+        [
+          18,
+          497,
+          3883
+        ],
+        [
+          48,
+          18,
+          42
+        ],
+        [
+          6,
+          798,
+          326
+        ]
+      ]
+    },
+    "num_tokens_scored": 5636
+  },
+  "bio_subtoken_metrics_entity_only": {
+    "krippendorff_alpha_nominal": -0.4605528931838885,
+    "cohen_kappa_token_level": -0.07591894824026224,
+    "cohen_kappa_token_level_macro": {
+      "mean": -0.04611370853183361,
+      "num_examples_scored": 103
+    },
+    "token_prf": {
+      "micro": {
+        "precision": 0.2778675282714055,
+        "recall": 0.2778675282714055,
+        "f1": 0.2778675282714055
+      },
+      "macro": {
+        "precision": 0.30264279624893436,
+        "recall": 0.15172074729596852,
+        "f1": 0.15806934498523284
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "B-FORMAT",
+        "I-FORMAT"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          48,
+          18,
+          42
+        ],
+        [
+          6,
+          798,
+          326
+        ]
+      ]
+    },
+    "num_tokens_scored": 1238
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "model_name": "xlm_roberta",
+  "eval_file": "xlm_roberta/coherence_xlm-roberta-base/eval_window_predictions.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.9230769230769231,
+      "recall": 0.9230769230769231,
+      "f1": 0.9230769230769231
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.8888888888888888,
+        "recall": 0.96,
+        "f1": 0.923076923076923
+      },
+      "pred→gold": {
+        "precision": 0.96,
+        "recall": 0.8888888888888888,
+        "f1": 0.923076923076923
+      }
+    },
+    "num_windows": 31,
+    "num_positive_gold": 25,
+    "num_positive_pred": 27
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.861111111111111,
+      "recall": 0.861111111111111,
+      "f1": 0.861111111111111
+    },
+    "num_samples": 24
+  }
+}

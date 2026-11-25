@@ -1,0 +1,34 @@
+{
+  "model_name": "neobert",
+  "eval_file": "neobert/lacks_synthesis_neoBERT/eval_window_predictions.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.34146341463414637,
+      "recall": 0.34146341463414637,
+      "f1": 0.34146341463414637
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 1.0,
+        "recall": 0.20588235294117646,
+        "f1": 0.34146341463414637
+      },
+      "pred→gold": {
+        "precision": 0.20588235294117646,
+        "recall": 1.0,
+        "f1": 0.34146341463414637
+      }
+    },
+    "num_windows": 42,
+    "num_positive_gold": 34,
+    "num_positive_pred": 7
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.21212121212121213,
+      "recall": 0.21212121212121213,
+      "f1": 0.21212121212121213
+    },
+    "num_samples": 33
+  }
+}

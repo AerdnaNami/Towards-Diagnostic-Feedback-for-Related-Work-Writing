@@ -1,0 +1,188 @@
+{
+  "task": "sentence_token_classification",
+  "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/modernbert_citations/unsupported_long_modernBERT/model.safetensors",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/unsupported_claim/unsupported_claim_ner_eval_long_6plus.json",
+  "category_name": "unsupported_claim",
+  "num_examples": 269,
+  "coverage_threshold": 0.3,
+  "seqeval_span_f1": 0.13793103448275862,
+  "token_overlap_f1_entity_vs_O": {
+    "precision": 0.4542024013722127,
+    "recall": 0.9137336093857833,
+    "f1": 0.6067827681026581,
+    "tp": 3972,
+    "fp": 4773,
+    "fn": 375
+  },
+  "pairwise_span_f1": {
+    "pairwise_micro": {
+      "precision": 0.49676025917926564,
+      "recall": 0.49676025917926564,
+      "f1": 0.49676025917926564
+    },
+    "pairwise_macro": {
+      "precision": 0.41414141414141414,
+      "recall": 0.41414141414141414,
+      "f1": 0.41414141414141414
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.3639240506329114,
+        "recall": 0.782312925170068,
+        "f1": 0.49676025917926564
+      },
+      "pred→gold": {
+        "precision": 0.782312925170068,
+        "recall": 0.3639240506329114,
+        "f1": 0.49676025917926564
+      }
+    },
+    "num_examples": 269,
+    "num_examples_macro_scored": 264,
+    "iou_threshold": 0.5
+  },
+  "sentence_label_from_bio_coverage": {
+    "confusion_matrix_labels": [
+      0,
+      1
+    ],
+    "confusion_matrix": [
+      [
+        10,
+        125
+      ],
+      [
+        2,
+        132
+      ]
+    ],
+    "precision": 0.5136186770428015,
+    "recall": 0.9850746268656716,
+    "f1": 0.6751918158567775,
+    "accuracy": 0.5278810408921933,
+    "num_sentences": 269
+  },
+  "token_metrics_all_tokens": {
+    "label_space": "binary_word_inside_vs_outside_span",
+    "cohen_kappa_token_level": 0.12291114476187714,
+    "cohen_kappa_token_level_macro": {
+      "mean": 0.020819260690313573,
+      "num_examples_scored": 269
+    },
+    "token_prf": {
+      "binary": {
+        "precision": 0.475938753189938,
+        "recall": 0.896942631398145,
+        "f1": 0.6218887697987376
+      }
+    },
+    "accuracy": 0.5251271313191744,
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "ENTITY"
+      ],
+      "matrix": [
+        [
+          900,
+          2875
+        ],
+        [
+          300,
+          2611
+        ]
+      ]
+    },
+    "num_tokens_scored": 6686
+  },
+  "bio_subtoken_metrics_all_tokens": {
+    "krippendorff_alpha_nominal": 0.00022240391683958638,
+    "cohen_kappa_token_level": 0.1412315635594653,
+    "cohen_kappa_token_level_macro": {
+      "mean": 0.20310333751326648,
+      "num_examples_scored": 269
+    },
+    "token_prf": {
+      "micro": {
+        "precision": 0.4984808203570072,
+        "recall": 0.4984808203570072,
+        "f1": 0.4984808203570072
+      },
+      "macro": {
+        "precision": 0.45209295584050313,
+        "recall": 0.4791706491273416,
+        "f1": 0.374158387896879
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "B-UNSUPPORTED_CLAIM",
+        "I-UNSUPPORTED_CLAIM",
+        "O"
+      ],
+      "matrix": [
+        [
+          45,
+          27,
+          75
+        ],
+        [
+          107,
+          3793,
+          300
+        ],
+        [
+          252,
+          4521,
+          1412
+        ]
+      ]
+    },
+    "num_tokens_scored": 10532
+  },
+  "bio_subtoken_metrics_entity_only": {
+    "krippendorff_alpha_nominal": 0.19806927099710836,
+    "cohen_kappa_token_level": 0.2181723741327496,
+    "cohen_kappa_token_level_macro": {
+      "mean": 0.37220140404567875,
+      "num_examples_scored": 144
+    },
+    "token_prf": {
+      "micro": {
+        "precision": 0.8829077524729698,
+        "recall": 0.8829077524729698,
+        "f1": 0.8829077524729698
+      },
+      "macro": {
+        "precision": 0.42966152291724075,
+        "recall": 0.40307256235827665,
+        "f1": 0.41562954375488265
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "B-UNSUPPORTED_CLAIM",
+        "I-UNSUPPORTED_CLAIM",
+        "O"
+      ],
+      "matrix": [
+        [
+          45,
+          27,
+          75
+        ],
+        [
+          107,
+          3793,
+          300
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "num_tokens_scored": 4347
+  }
+}

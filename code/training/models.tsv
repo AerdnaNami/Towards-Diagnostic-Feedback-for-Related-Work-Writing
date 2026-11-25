@@ -1,0 +1,5 @@
+lacks_synth_xlmr	encoder_training/xlmr/lacks_synthesis_xlmr/checkpoint-39	paragraph
+unsupp_short_xlmr	encoder_training/xlmr/unsupported_short_xlmr/checkpoint-30	short
+unsupp_long_xlmr	encoder_training/xlmr/unsupported_long_xlmr/model.safetensors	sentence
+format_xlmr	encoder_training/xlmr/format_xlmr/model.safetensors	sentence
+coherence_xlmr	encoder_training/xlmr/coherence_xlmr/checkpoint-52	paragraph

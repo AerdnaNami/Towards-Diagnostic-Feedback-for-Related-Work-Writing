@@ -1,0 +1,27 @@
+{
+  "model_name": "modernbert",
+  "eval_file": "modernbert/unsupported_short_modernBERT/eval_predicted_spans.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.8818325434439178,
+      "recall": 0.735893830198629,
+      "f1": 0.8022804580079528
+    },
+    "tp": 8373,
+    "fp": 1122,
+    "fn": 3005,
+    "num_examples": 26
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.8704572948567443,
+      "recall": 0.7565986273248015,
+      "f1": 0.794434612971525
+    },
+    "num_examples": 26
+  },
+  "kappa_macro": {
+    "mean": 0.1644386221789025,
+    "num_examples": 26
+  }
+}

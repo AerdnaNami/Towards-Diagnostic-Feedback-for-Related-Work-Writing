@@ -1,0 +1,36 @@
+{
+  "model_name": "scibert",
+  "eval_file": "scibert/unsupported_long_scibert/eval_predicted_spans.json",
+  "iou_threshold": 0.5,
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.2909090909090909,
+        "recall": 0.2191780821917808,
+        "f1": 0.25
+      },
+      "pred→gold": {
+        "precision": 0.2191780821917808,
+        "recall": 0.2909090909090909,
+        "f1": 0.25
+      }
+    },
+    "num_examples": 86,
+    "iou_threshold": 0.5
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.18614718614718614,
+      "recall": 0.18614718614718614,
+      "f1": 0.18614718614718614
+    },
+    "num_examples_scored": 77,
+    "num_examples_total": 86,
+    "iou_threshold": 0.5
+  }
+}

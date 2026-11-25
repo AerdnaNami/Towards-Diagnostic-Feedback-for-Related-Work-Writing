@@ -1,0 +1,27 @@
+{
+  "model_name": "neobert",
+  "eval_file": "neobert/unsupported_short_neoBERT/eval_predicted_spans.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.8291314180417121,
+      "recall": 0.8700123044471788,
+      "f1": 0.8490800703349488
+    },
+    "tp": 9899,
+    "fp": 2040,
+    "fn": 1479,
+    "num_examples": 26
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.814963181395978,
+      "recall": 0.885802690720534,
+      "f1": 0.8408398673776929
+    },
+    "num_examples": 26
+  },
+  "kappa_macro": {
+    "mean": -0.036949542491439606,
+    "num_examples": 26
+  }
+}

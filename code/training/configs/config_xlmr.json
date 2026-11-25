@@ -1,0 +1,26 @@
+{
+  "base_model": "xlm-roberta-base",
+  "output_root": "encoder_training/xlm_roberta",
+
+  "defaults": {
+    "learning_rate": 3e-5,
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 16,
+    "per_device_eval_batch_size": 16,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "logging_steps": 500,
+    "save_strategy": "epoch",
+    "evaluation_strategy": "epoch"
+  },
+
+  "categories": [
+    {
+      "name": "unsupported_claim",
+      "train_script": "encoder_training/train_code/train_short_unsupp_claim.py",
+      "train_path": "data/unsupported_claim/sciERC_train.json",
+      "eval_path": "data/unsupported_claim/unsupported_claim_ner_eval_short_1_5w.json",
+      "run_name": "4_unsupported_short_xlm-roberta-base"
+    }
+  ]
+}

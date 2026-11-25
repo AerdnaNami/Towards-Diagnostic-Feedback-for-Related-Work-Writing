@@ -1,0 +1,140 @@
+{
+  "run_name": "unsupp_short_xlmr",
+  "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/xlmr/unsupported_short_xlmr/checkpoint-30",
+  "tokenizer_path": null,
+  "config_path": null,
+  "task": "short",
+  "category_name": "unsupported_claim",
+  "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/unsupported_claim/unsupported_claim_ner_eval_short_1_5w.json",
+  "training_report_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/xlmr/unsupported_short_xlmr/final_eval_report.json",
+  "evaluation_settings": {
+    "coverage_threshold": 0.5,
+    "window_tokens": 160,
+    "stride_tokens": 80,
+    "max_span_words": 5,
+    "iou_threshold": 0.5,
+    "min_pred_span_len": 1,
+    "short_entity_threshold": 0.25,
+    "short_singleton_keep_threshold": 0.6,
+    "short_citation_filter": true
+  },
+  "short": {
+    "task": "short_unsupported_claim_token_classification",
+    "model_name_or_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/xlmr/unsupported_short_xlmr/checkpoint-30",
+    "data_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/data/unsupported_claim/unsupported_claim_ner_eval_short_1_5w.json",
+    "category_name": "unsupported_claim",
+    "max_span_words": 5,
+    "num_eval_sequences": 45,
+    "num_eval_tokens_scored": 1359,
+    "postprocessing": {
+      "entity_probability_threshold": 0.25,
+      "singleton_keep_threshold": 0.6,
+      "citation_filter": true
+    },
+    "token_overlap_f1_entity_vs_O": {
+      "precision": 0.3333333333333333,
+      "recall": 0.27611940298507465,
+      "f1": 0.3020408163265306,
+      "tp": 37,
+      "fp": 74,
+      "fn": 97
+    },
+    "exact_match": {
+      "token_accuracy": 0.8741721854304636,
+      "sequence_exact_match": 0.08888888888888889
+    },
+    "cohens_kappa_token_level": 0.2335632092926615,
+    "cohens_kappa_token_level_macro": {
+      "mean": 0.17139797652738484,
+      "num_examples_scored": 45
+    },
+    "pairwise_span_f1": {
+      "pairwise_micro": {
+        "precision": 0.26262626262626265,
+        "recall": 0.26262626262626265,
+        "f1": 0.26262626262626265
+      },
+      "pairwise_macro": {
+        "precision": 0.2185185185185185,
+        "recall": 0.2185185185185185,
+        "f1": 0.2185185185185185
+      },
+      "per_pair": {
+        "gold→pred": {
+          "precision": 0.2826086956521739,
+          "recall": 0.24528301886792453,
+          "f1": 0.2626262626262626
+        },
+        "pred→gold": {
+          "precision": 0.24528301886792453,
+          "recall": 0.2826086956521739,
+          "f1": 0.2626262626262626
+        }
+      },
+      "num_examples": 45,
+      "num_examples_macro_scored": 45,
+      "iou_threshold": 0.5
+    },
+    "pairwise_binary_agreement": {
+      "pairwise_micro": {
+        "precision": 0.8648635429912941,
+        "recall": 0.904917865001791,
+        "f1": 0.8844374421687048,
+        "tp": 17683,
+        "fp": 2763,
+        "fn": 1858
+      },
+      "pairwise_macro": {
+        "precision": 0.8470006410110463,
+        "recall": 0.8774491034317962,
+        "f1": 0.8546869505613464
+      },
+      "cohen_kappa": 0.2169549879800573,
+      "num_pairwise_items_scored": 23443
+    },
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "ENTITY"
+      ],
+      "matrix": [
+        [
+          1151,
+          74
+        ],
+        [
+          97,
+          37
+        ]
+      ]
+    },
+    "raw_argmax_subtoken_metrics": {
+      "num_tokens_scored": 2443,
+      "token_overlap_f1_entity_vs_O": {
+        "precision": 0.29927007299270075,
+        "recall": 0.12933753943217666,
+        "f1": 0.18061674008810572,
+        "tp": 41,
+        "fp": 96,
+        "fn": 276
+      },
+      "cohen_kappa_token_level": 0.11099676795817903,
+      "confusion_matrix": {
+        "labels": [
+          "O",
+          "ENTITY"
+        ],
+        "matrix": [
+          [
+            2030,
+            96
+          ],
+          [
+            276,
+            41
+          ]
+        ]
+      }
+    }
+  }
+}

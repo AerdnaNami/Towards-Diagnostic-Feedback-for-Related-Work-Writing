@@ -1,0 +1,27 @@
+{
+  "model_name": "scibert",
+  "eval_file": "scibert/unsupported_short_scibert/eval_predicted_spans.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.9040867389491243,
+      "recall": 0.7621726138161364,
+      "f1": 0.8270863137815928
+    },
+    "tp": 8672,
+    "fp": 920,
+    "fn": 2706,
+    "num_examples": 26
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.8906337700454257,
+      "recall": 0.7705925065276571,
+      "f1": 0.8179111244514049
+    },
+    "num_examples": 26
+  },
+  "kappa_macro": {
+    "mean": 0.24277446470106842,
+    "num_examples": 26
+  }
+}

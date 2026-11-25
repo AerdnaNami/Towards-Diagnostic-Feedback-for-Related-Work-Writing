@@ -1,0 +1,34 @@
+{
+  "model_name": "scibert",
+  "eval_file": "scibert/coherence_scibert/eval_window_predictions.json",
+  "micro": {
+    "pairwise_micro": {
+      "precision": 0.9361702127659575,
+      "recall": 0.9361702127659575,
+      "f1": 0.9361702127659575
+    },
+    "per_pair": {
+      "gold→pred": {
+        "precision": 0.88,
+        "recall": 1.0,
+        "f1": 0.9361702127659575
+      },
+      "pred→gold": {
+        "precision": 1.0,
+        "recall": 0.88,
+        "f1": 0.9361702127659575
+      }
+    },
+    "num_windows": 28,
+    "num_positive_gold": 22,
+    "num_positive_pred": 25
+  },
+  "macro": {
+    "pairwise_macro": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875
+    },
+    "num_samples": 24
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "method": "nonparametric percentile bootstrap",
+  "confidence_level": 0.95,
+  "bootstrap_samples": 2000,
+  "seed": 42,
+  "resampling": {
+    "sentence": "evaluation examples with replacement",
+    "short": "evaluation examples with replacement",
+    "paragraph": "documents with replacement; all windows retained within each sampled document"
+  },
+  "runs": [
+    {
+      "run_name": "coherence_scibert",
+      "task": "paragraph",
+      "category_name": "coherence",
+      "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/scibert_citations/coherence_scibert/checkpoint-129",
+      "predictions_path": "/mnt/c/users/imana/desktop/masters/masters_thesis/codebase/code/training/local_eval_runs/scibert/coherence_scibert/paragraph/paragraph_eval_window_predictions.json",
+      "bootstrap_unit": "documents",
+      "num_bootstrap_units": 30,
+      "notes": [],
+      "metrics": {
+        "final_eval_metrics.precision": {
+          "estimate": 0.9875776397515528,
+          "lower": 0.96756669006669,
+          "upper": 1.0
+        },
+        "final_eval_metrics.recall": {
+          "estimate": 0.9636363636363636,
+          "lower": 0.9358276504930579,
+          "upper": 0.9872631621381923
+        },
+        "final_eval_metrics.f1": {
+          "estimate": 0.9754601226993865,
+          "lower": 0.9592476489028213,
+          "upper": 0.9890909090909091
+        },
+        "final_eval_metrics.accuracy": {
+          "estimate": 0.9520958083832335,
+          "lower": 0.9216867469879518,
+          "upper": 0.9784172661870504
+        },
+        "final_eval_metrics.cohen_kappa": {
+          "estimate": -0.018292682926829857,
+          "lower": -0.03478369024443042,
+          "upper": 0.0
+        },
+        "final_eval_metrics.cohen_kappa_macro_by_document": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "pairwise_window_f1.pairwise_micro.precision": {
+          "estimate": 0.9754601226993865,
+          "lower": 0.9592476489028213,
+          "upper": 0.9890909090909091
+        },
+        "pairwise_window_f1.pairwise_micro.recall": {
+          "estimate": 0.9754601226993865,
+          "lower": 0.9592476489028213,
+          "upper": 0.9890909090909091
+        },
+        "pairwise_window_f1.pairwise_micro.f1": {
+          "estimate": 0.9754601226993865,
+          "lower": 0.9592476489028213,
+          "upper": 0.9890909090909091
+        },
+        "pairwise_window_f1.pairwise_macro.precision": {
+          "estimate": 0.9735289246851113,
+          "lower": 0.9530079323801435,
+          "upper": 0.9898158261241427
+        },
+        "pairwise_window_f1.pairwise_macro.recall": {
+          "estimate": 0.9735289246851113,
+          "lower": 0.9530079323801435,
+          "upper": 0.9898158261241427
+        },
+        "pairwise_window_f1.pairwise_macro.f1": {
+          "estimate": 0.9735289246851113,
+          "lower": 0.9530079323801435,
+          "upper": 0.9898158261241427
+        }
+      }
+    },
+    {
+      "run_name": "format_scibert",
+      "task": "sentence",
+      "category_name": "format",
+      "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/scibert_citations/format_scibert/model.safetensors",
+      "predictions_path": "/mnt/c/users/imana/desktop/masters/masters_thesis/codebase/code/training/local_eval_runs/scibert/format_scibert/sentence/sentence_eval_predicted_spans.json",
+      "bootstrap_unit": "examples",
+      "num_bootstrap_units": 103,
+      "notes": [],
+      "metrics": {
+        "token_overlap_f1_entity_vs_O.precision": {
+          "estimate": 0.8009592326139089,
+          "lower": 0.7227146464646466,
+          "upper": 0.8715511798849426
+        },
+        "token_overlap_f1_entity_vs_O.recall": {
+          "estimate": 0.6242990654205608,
+          "lower": 0.5376506441095644,
+          "upper": 0.7084266414387013
+        },
+        "token_overlap_f1_entity_vs_O.f1": {
+          "estimate": 0.7016806722689075,
+          "lower": 0.6231512336735461,
+          "upper": 0.7687437257917304
+        },
+        "token_accuracy": {
+          "estimate": 0.914560770156438,
+          "lower": 0.893552974352198,
+          "upper": 0.9326631358600396
+        },
+        "cohen_kappa_token_level": {
+          "estimate": 0.652712877144112,
+          "lower": 0.5653743704819216,
+          "upper": 0.728313395835682
+        },
+        "cohen_kappa_token_level_macro": {
+          "estimate": 0.5264631039091613,
+          "lower": 0.4419666812920107,
+          "upper": 0.6075773053878347
+        },
+        "pairwise_span_f1.pairwise_micro.precision": {
+          "estimate": 0.6666666666666666,
+          "lower": 0.5829596412556054,
+          "upper": 0.7403846153846154
+        },
+        "pairwise_span_f1.pairwise_micro.recall": {
+          "estimate": 0.6666666666666666,
+          "lower": 0.5829596412556054,
+          "upper": 0.7403846153846154
+        },
+        "pairwise_span_f1.pairwise_micro.f1": {
+          "estimate": 0.6666666666666666,
+          "lower": 0.5829596412556054,
+          "upper": 0.7403846153846154
+        },
+        "pairwise_span_f1.pairwise_macro.precision": {
+          "estimate": 0.6278317152103559,
+          "lower": 0.5372168284789643,
+          "upper": 0.7136326860841423
+        },
+        "pairwise_span_f1.pairwise_macro.recall": {
+          "estimate": 0.6278317152103559,
+          "lower": 0.5372168284789643,
+          "upper": 0.7136326860841423
+        },
+        "pairwise_span_f1.pairwise_macro.f1": {
+          "estimate": 0.6278317152103559,
+          "lower": 0.5372168284789643,
+          "upper": 0.7136326860841423
+        },
+        "word_level.exact_span_f1": {
+          "estimate": 0.3380281690140845,
+          "lower": 0.24657534246575347,
+          "upper": 0.4292682926829268
+        },
+        "sequence_exact_match": {
+          "estimate": 0.32038834951456313,
+          "lower": 0.23300970873786409,
+          "upper": 0.4077669902912621
+        },
+        "sentence_label_from_bio_coverage.precision": {
+          "estimate": 0.9047619047619048,
+          "lower": 0.7619047619047619,
+          "upper": 1.0
+        },
+        "sentence_label_from_bio_coverage.recall": {
+          "estimate": 0.7307692307692307,
+          "lower": 0.5453598484848486,
+          "upper": 0.8928571428571429
+        },
+        "sentence_label_from_bio_coverage.f1": {
+          "estimate": 0.8085106382978723,
+          "lower": 0.6666666666666665,
+          "upper": 0.9166666666666666
+        },
+        "sentence_label_from_bio_coverage.accuracy": {
+          "estimate": 0.912621359223301,
+          "lower": 0.8543689320388349,
+          "upper": 0.9611650485436893
+        },
+        "sentence_label_from_bio_coverage.cohen_kappa": {
+          "estimate": 0.7527340624166445,
+          "lower": 0.5784389933776021,
+          "upper": 0.8914117720500514
+        }
+      }
+    },
+    {
+      "run_name": "lacks_synth_scibert",
+      "task": "paragraph",
+      "category_name": "lacks_synthesis",
+      "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/scibert_citations/lacks_synthesis_scibert/checkpoint-39",
+      "predictions_path": "/mnt/c/users/imana/desktop/masters/masters_thesis/codebase/code/training/local_eval_runs/scibert/lacks_synth_scibert/paragraph/paragraph_eval_window_predictions.json",
+      "bootstrap_unit": "documents",
+      "num_bootstrap_units": 42,
+      "notes": [],
+      "metrics": {
+        "final_eval_metrics.precision": {
+          "estimate": 0.9793103448275862,
+          "lower": 0.9592460495169854,
+          "upper": 0.9955376723057644
+        },
+        "final_eval_metrics.recall": {
+          "estimate": 0.9895470383275261,
+          "lower": 0.971830985915493,
+          "upper": 1.0
+        },
+        "final_eval_metrics.f1": {
+          "estimate": 0.9844020797227035,
+          "lower": 0.97164211505064,
+          "upper": 0.9935494210090984
+        },
+        "final_eval_metrics.accuracy": {
+          "estimate": 0.9692832764505119,
+          "lower": 0.9448482184375726,
+          "upper": 0.9871815286624204
+        },
+        "final_eval_metrics.cohen_kappa": {
+          "estimate": -0.013840830449826773,
+          "lower": -0.025289911986880218,
+          "upper": 0.0
+        },
+        "final_eval_metrics.cohen_kappa_macro_by_document": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "pairwise_window_f1.pairwise_micro.precision": {
+          "estimate": 0.9844020797227037,
+          "lower": 0.97164211505064,
+          "upper": 0.9935494210090984
+        },
+        "pairwise_window_f1.pairwise_micro.recall": {
+          "estimate": 0.9844020797227037,
+          "lower": 0.97164211505064,
+          "upper": 0.9935494210090984
+        },
+        "pairwise_window_f1.pairwise_micro.f1": {
+          "estimate": 0.9844020797227037,
+          "lower": 0.97164211505064,
+          "upper": 0.9935494210090984
+        },
+        "pairwise_window_f1.pairwise_macro.precision": {
+          "estimate": 0.9863655061509611,
+          "lower": 0.9746655682628427,
+          "upper": 0.9953885598168719
+        },
+        "pairwise_window_f1.pairwise_macro.recall": {
+          "estimate": 0.9863655061509611,
+          "lower": 0.9746655682628427,
+          "upper": 0.9953885598168719
+        },
+        "pairwise_window_f1.pairwise_macro.f1": {
+          "estimate": 0.9863655061509611,
+          "lower": 0.9746655682628427,
+          "upper": 0.9953885598168719
+        }
+      }
+    },
+    {
+      "run_name": "unsupp_long_scibert",
+      "task": "sentence",
+      "category_name": "unsupported_claim",
+      "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/scibert_citations/unsupported_long_scibert/model.safetensors",
+      "predictions_path": "/mnt/c/users/imana/desktop/masters/masters_thesis/codebase/code/training/local_eval_runs/scibert/unsupp_long_scibert/sentence/sentence_eval_predicted_spans.json",
+      "bootstrap_unit": "examples",
+      "num_bootstrap_units": 269,
+      "notes": [],
+      "metrics": {
+        "token_overlap_f1_entity_vs_O.precision": {
+          "estimate": 0.4863915715539947,
+          "lower": 0.383956599179446,
+          "upper": 0.5891967735198913
+        },
+        "token_overlap_f1_entity_vs_O.recall": {
+          "estimate": 0.19031260735142563,
+          "lower": 0.14864180145728906,
+          "upper": 0.2337204666582735
+        },
+        "token_overlap_f1_entity_vs_O.f1": {
+          "estimate": 0.2735802469135803,
+          "lower": 0.21758390790028986,
+          "upper": 0.32513699582074024
+        },
+        "token_accuracy": {
+          "estimate": 0.5599760693987437,
+          "lower": 0.5104684293381408,
+          "upper": 0.6089279611568368
+        },
+        "cohen_kappa_token_level": {
+          "estimate": 0.037992292479274034,
+          "lower": -0.024201572394725708,
+          "upper": 0.09764756114434563
+        },
+        "cohen_kappa_token_level_macro": {
+          "estimate": 0.014425365323524541,
+          "lower": -0.0019736966682499146,
+          "upper": 0.0319349625202942
+        },
+        "pairwise_span_f1.pairwise_micro.precision": {
+          "estimate": 0.16911764705882354,
+          "lower": 0.10768595041322315,
+          "upper": 0.23208510692692155
+        },
+        "pairwise_span_f1.pairwise_micro.recall": {
+          "estimate": 0.16911764705882354,
+          "lower": 0.10768595041322315,
+          "upper": 0.23208510692692155
+        },
+        "pairwise_span_f1.pairwise_micro.f1": {
+          "estimate": 0.16911764705882354,
+          "lower": 0.10768595041322314,
+          "upper": 0.23208510692692155
+        },
+        "pairwise_span_f1.pairwise_macro.precision": {
+          "estimate": 0.11290322580645161,
+          "lower": 0.06950883804989862,
+          "upper": 0.15938740293356335
+        },
+        "pairwise_span_f1.pairwise_macro.recall": {
+          "estimate": 0.11290322580645161,
+          "lower": 0.06950883804989862,
+          "upper": 0.15938740293356335
+        },
+        "pairwise_span_f1.pairwise_macro.f1": {
+          "estimate": 0.11290322580645161,
+          "lower": 0.06950883804989862,
+          "upper": 0.15938740293356335
+        },
+        "word_level.exact_span_f1": {
+          "estimate": 0.014705882352941176,
+          "lower": 0.0,
+          "upper": 0.036496350364963494
+        },
+        "sequence_exact_match": {
+          "estimate": 0.31226765799256506,
+          "lower": 0.25650557620817843,
+          "upper": 0.3680297397769517
+        },
+        "sentence_label_from_bio_coverage.precision": {
+          "estimate": 0.4852941176470588,
+          "lower": 0.36666666666666664,
+          "upper": 0.6031746031746031
+        },
+        "sentence_label_from_bio_coverage.recall": {
+          "estimate": 0.2462686567164179,
+          "lower": 0.17424242424242425,
+          "upper": 0.3209023314086501
+        },
+        "sentence_label_from_bio_coverage.f1": {
+          "estimate": 0.3267326732673267,
+          "lower": 0.2391180830039526,
+          "upper": 0.4093023255813953
+        },
+        "sentence_label_from_bio_coverage.accuracy": {
+          "estimate": 0.4944237918215613,
+          "lower": 0.4349442379182156,
+          "upper": 0.5539033457249071
+        },
+        "sentence_label_from_bio_coverage.cohen_kappa": {
+          "estimate": -0.01301434346790713,
+          "lower": -0.11784712448247299,
+          "upper": 0.08912086817122572
+        }
+      }
+    },
+    {
+      "run_name": "unsupp_short_scibert",
+      "task": "short",
+      "category_name": "unsupported_claim",
+      "model_path": "/mnt/c/Users/imana/Desktop/Masters/Masters_Thesis/codebase/code/training/encoder_training/scibert_citations/unsupported_short_scibert/checkpoint-21",
+      "predictions_path": "/mnt/c/users/imana/desktop/masters/masters_thesis/codebase/code/training/local_eval_runs/scibert/unsupp_short_scibert/short/short_unsupp_eval_predicted_spans.json",
+      "bootstrap_unit": "examples",
+      "num_bootstrap_units": 45,
+      "notes": [],
+      "metrics": {
+        "token_overlap_f1_entity_vs_O.precision": {
+          "estimate": 0.3,
+          "lower": 0.22271464646464648,
+          "upper": 0.38370663265306104
+        },
+        "token_overlap_f1_entity_vs_O.recall": {
+          "estimate": 0.4701492537313433,
+          "lower": 0.3454388714733543,
+          "upper": 0.5939938289119023
+        },
+        "token_overlap_f1_entity_vs_O.f1": {
+          "estimate": 0.3662790697674419,
+          "lower": 0.274997852233677,
+          "upper": 0.45086858527161494
+        },
+        "token_accuracy": {
+          "estimate": 0.8395879323031641,
+          "lower": 0.812741131707704,
+          "upper": 0.8651093425722423
+        },
+        "cohen_kappa_token_level": {
+          "estimate": 0.27954651569977823,
+          "lower": 0.1827519948219657,
+          "upper": 0.37368225967159013
+        },
+        "cohen_kappa_token_level_macro": {
+          "estimate": 0.24913969478959316,
+          "lower": 0.16044741493989587,
+          "upper": 0.33774379858119974
+        },
+        "pairwise_span_f1.pairwise_micro.precision": {
+          "estimate": 0.33548387096774196,
+          "lower": 0.2483637592968222,
+          "upper": 0.4233697491178034
+        },
+        "pairwise_span_f1.pairwise_micro.recall": {
+          "estimate": 0.33548387096774196,
+          "lower": 0.2483637592968222,
+          "upper": 0.4233697491178034
+        },
+        "pairwise_span_f1.pairwise_micro.f1": {
+          "estimate": 0.33548387096774196,
+          "lower": 0.2483637592968222,
+          "upper": 0.4233697491178034
+        },
+        "pairwise_span_f1.pairwise_macro.precision": {
+          "estimate": 0.3179012345679012,
+          "lower": 0.22109567901234567,
+          "upper": 0.41704629629629625
+        },
+        "pairwise_span_f1.pairwise_macro.recall": {
+          "estimate": 0.3179012345679012,
+          "lower": 0.22109567901234567,
+          "upper": 0.41704629629629625
+        },
+        "pairwise_span_f1.pairwise_macro.f1": {
+          "estimate": 0.3179012345679012,
+          "lower": 0.2210956790123457,
+          "upper": 0.41704629629629625
+        },
+        "word_level.exact_span_f1": {
+          "estimate": 0.1806451612903226,
+          "lower": 0.10666666666666667,
+          "upper": 0.2634834497671324
+        },
+        "sequence_exact_match": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "upper": 0.0
+        }
+      }
+    }
+  ],
+  "errors": []
+}
