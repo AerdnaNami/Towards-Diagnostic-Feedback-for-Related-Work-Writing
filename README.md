@@ -1,6 +1,4 @@
-# citation_evaluation
-
-Code and data for Towards Diagnostic Feedback for Related Work Writing: A Span-Level Benchmark, EACL 2027.
+# Towards Diagnostic Feedback for Related Work Writing: A Span-Level Benchmark, EACL 2027
 
 The Related Work section is central to academic writing, yet prior work has largely focused on generation and citation classification rather than the analysis of writing issues within the text. To support model evaluation in this setting, we formulate span-level error detection for Related Work sections and introduce a taxonomy of four categories: Format, Unsupported Claim, Coherence, and Lacks Synthesis. We construct an annotated dataset from NLPeer with 137 documents and 395 spans, and generate 1,100 synthetic training spans using GPT-5. Using this dataset, we benchmark prompting-based baselines and encoder models for detecting writing issue spans, alongside a citation-aware post-processing pipeline for short Unsupported Claim spans. Encoder models outperform prompting approaches in span localization, while prompting methods tend to identify broad regions without precise boundaries. We also find that synthetic spans match real spans structurally but show reduced lexical diversity, affecting boundary alignment. Our work provides a benchmark dataset and empirical analysis for automated evaluation of Related Work writing quality, which we make publicly available.
 
@@ -86,6 +84,7 @@ If you use this code or data, please cite:
   booktitle = {TODO},
   year      = {TODO},
 }
+
 ```
 <!-- 
 ## License
