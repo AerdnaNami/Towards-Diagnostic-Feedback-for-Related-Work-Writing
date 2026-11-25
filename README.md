@@ -2,7 +2,7 @@
 
 Code and data for Towards Diagnostic Feedback for Related Work Writing: A Span-Level Benchmark, EACL 2027.
 
-<!-- The Related Work section is central to academic writing, yet prior work has largely focused on generation and citation classification rather than the analysis of writing issues within the text. To support model evaluation in this setting, we formulate span-level error detection for Related Work sections and introduce a taxonomy of four categories: \textit{Format}, \textit{Unsupported Claim}, \textit{Coherence}, and \textit{Lacks Synthesis}. We construct an annotated dataset from {\tt NLPeer} with 137 documents and 395 spans, and generate 1,100 synthetic training spans using {\tt GPT-5}. Using this dataset, we benchmark prompting-based baselines and encoder models for detecting writing issue spans, alongside a citation-aware post-processing pipeline for short \textit{Unsupported Claim} spans. Encoder models outperform prompting approaches in span localization, while prompting methods tend to identify broad regions without precise boundaries. We also find that synthetic spans match real spans structurally but show reduced lexical diversity, affecting boundary alignment. Our work provides a benchmark dataset and empirical analysis for automated evaluation of Related Work writing quality, which we make publicly available. -->
+The Related Work section is central to academic writing, yet prior work has largely focused on generation and citation classification rather than the analysis of writing issues within the text. To support model evaluation in this setting, we formulate span-level error detection for Related Work sections and introduce a taxonomy of four categories: Format, Unsupported Claim, Coherence, and Lacks Synthesis. We construct an annotated dataset from NLPeer with 137 documents and 395 spans, and generate 1,100 synthetic training spans using GPT-5. Using this dataset, we benchmark prompting-based baselines and encoder models for detecting writing issue spans, alongside a citation-aware post-processing pipeline for short Unsupported Claim spans. Encoder models outperform prompting approaches in span localization, while prompting methods tend to identify broad regions without precise boundaries. We also find that synthetic spans match real spans structurally but show reduced lexical diversity, affecting boundary alignment. Our work provides a benchmark dataset and empirical analysis for automated evaluation of Related Work writing quality, which we make publicly available.
 
 We detect citation-related issues in the related-work sections of scientific papers. Each issue is framed as a span-tagging (BIO) task. There are four categories:
 
@@ -87,34 +87,7 @@ If you use this code or data, please cite:
   year      = {TODO},
 }
 ```
-
-Please also cite the datasets this work builds on:
-
-```bibtex
-@inproceedings{dycke-etal-2023-nlpeer,
-  title     = "{NLP}eer: A Unified Resource for the Computational Study of Peer Review",
-  author    = "Dycke, Nils and Kuznetsov, Ilia and Gurevych, Iryna",
-  booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-  year      = "2023",
-  address   = "Toronto, Canada",
-  publisher = "Association for Computational Linguistics",
-  url       = "https://aclanthology.org/2023.acl-long.277",
-  pages     = "5049--5073",
-}
-
-@inproceedings{luan-etal-2018-multi,
-  title     = "Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction",
-  author    = "Luan, Yi and He, Luheng and Ostendorf, Mari and Hajishirzi, Hannaneh",
-  booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
-  year      = "2018",
-  address   = "Brussels, Belgium",
-  publisher = "Association for Computational Linguistics",
-  url       = "https://aclanthology.org/D18-1360",
-  pages     = "3219--3232",
-}
-```
-
+<!-- 
 ## License
 
 <!-- TODO: choose a license, e.g. MIT/Apache-2.0 for code, CC BY 4.0 for the synthetic data. The real excerpts follow the NLPeer source licenses. -->
-TODO
